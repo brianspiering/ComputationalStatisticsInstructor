@@ -1,6 +1,8 @@
 Statistics: A Computational Approach
 ========
 
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/brianspiering/statistics_a_computational_appoarch/master)
+
 Historically statistics is analytic and theoretically driven.
 
 This is an inverted approach - computational and empirically driven.
