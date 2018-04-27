@@ -18,12 +18,12 @@ from random import choices
 
 # Traditional die: A cube
 n_sides = 6
+die = list(range(1, n_sides+1))
 
 # Roll a die
-choices(population=list(range(1, n_sides+1)))
+choices(population=die)[0]
 
 # Roll 2 dice
-roll_2_dice = (lambda: choices(population=list(range(1, n_sides+1)),
-                      k=2))
+roll_2_dice = lambda: choices(population=die, k=2)
 roll_2_dice()
 ```
