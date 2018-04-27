@@ -9,7 +9,7 @@ This is an inverted approach - computational and empirically movtivated.
 
 ----
 
-The goal is to leveage efficient compute and resampling techniques (e.g., bootstrapping and permutation tests) to build statistics from first principles. Use that firm foundation to solve novel problems.
+The goal is to leveage efficient compute and resampling techniques (e.g., bootstrapping and permutation tests) to build statistics from first principles. Use that new foundation to solve novel problems.
 
 For example instead of a calculating the probability of dice rolling, let's build a simulator and see what happens:
 
