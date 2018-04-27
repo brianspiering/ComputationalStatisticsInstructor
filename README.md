@@ -1,19 +1,17 @@
-Statistics: A Computational Approach
+A Computational Take on Statistics
 ========
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/brianspiering/statistics_a_computational_appoarch/master)
 
-Historically statistics is analytic and theoretically driven.
+Historically, statistics has been analytic and theoretically driven.
 
-This is an inverted approach - computational and empirically driven.
+This is an inverted approach - computational and empirically movtivated.
 
 ----
 
-The goal is to lean on efficient compute and resampling techniques (e.g., bootstrapping and permutation tests) to build statistics from first principles to understand what is going on.
+The goal is to leveage efficient compute and resampling techniques (e.g., bootstrapping and permutation tests) to build statistics from first principles. Use that firm foundation to solve novel problems.
 
-From that firm foundation, be able to solve novel problems.
-
-For example instead of a calculating the probability of dice rolling, let's build a simulator and see what happens.
+For example instead of a calculating the probability of dice rolling, let's build a simulator and see what happens:
 
 ```python
 from random import choices
