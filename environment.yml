@@ -1,15 +1,16 @@
-name: nlp
+name: stats
 channels:
   - conda-forge
   - damianavila82
 dependencies:
-  - python==3.6
+  - python==3.7
   - ipython
   - jupyter
   - matplotlib
-  - seaborn
   - numpy
   - pandas
-  - scikit-learn
-  - rise
   - pip
+  - pymc3
+  - rise
+  - scikit-learn
+  - seaborn

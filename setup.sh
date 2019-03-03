@@ -1,27 +1,31 @@
 #!/bin/bash
+
+# Before running this script, install miniconda or anaconda with Python 3.7
+# https://conda.io/docs/user-guide/install/macos.html
+
+# After installing either miniconda or anaconda, open a new terminal code so conda is on the path
+# Must cd into this directory to run this script successfully
+
+# Setup the environment for the classroom. TeachOps FTW!
 set -e # Exit immediately if a command exits with a non-zero status
 set -x # Exit immediately if a pipeline exits with a non-zero status
 
-# Create environment
-conda update -n base conda -y
-conda env create --force
+# Name of environment is from environment.yml
+envname=$(sed '1!d' environment.yml | sed 's/^.* //')
+
+# Create environment based on environment.yml in the same directory
+conda update -n base conda -y 
+conda env create -n $envname --force 
 
 # Start environment
-source activate stats
+source activate $envname
 
-# Update environment (might break stuff. move fast!?)
-conda update --all --yes
-# pip install --upgrade -r <( pip freeze )
+# Update during development; Pin right before teaching
+conda update --all --yes 
 
-# Setup spell checking and other notebook enhancements
-git clone https://github.com/Calysto/notebook-extensions.git
-cd notebook-extensions
-jupyter nbextension install calysto --user
-jupyter nbextension enable calysto/spell-check/main
-jupyter nbextension enable calysto/cell-tools/main
-jupyter nbextension enable calysto/annotate/main
-rm -r -f notebook-extensions
-
-# Setup RISE (https://github.com/damianavila/RISE) slideshows 
+# Enable extensions
+jupyter contrib nbextension install --user
+jupyter nbextension enable spellchecker/main
+jupyter nbextension enable codefolding/main
 jupyter nbextension install rise --py --sys-prefix
 jupyter nbextension enable rise --py --sys-prefix
