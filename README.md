@@ -1,29 +1,19 @@
-A Computational Take on Statistics
-========
+An Introduction to Computational Statistics in Python
+-----
 
-[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/brianspiering/statistics_a_computational_appoarch/master)
+Abstract
+------
+This workshop will provide a hands-on introduction to computational statistics. The focus will be on the efficient simulation of probabilities and statistics, for example the outcomes of dice rolling  or the results of an A/B test. By the end of the workshop, you should be able to apply bootstrapping and permutation testing to solve applied Data Science problems.
 
-Historically, statistics has been analytic and theoretically driven.
+A working knowledge of Python (e.g., create variables and functions) is required. There are no math, probability, or statistics prerequisites. 
 
-This is an inverted approach - computational and empirically movtivated.
+You'll be writing code during the workshop so please bring a laptop. All materials and resources will be provided.
 
-----
+Software
+------
 
-The goal is to leveage efficient compute and resampling techniques (e.g., bootstrapping and permutation tests) to build statistics from first principles. Use that new foundation to solve novel problems.
+There are 3 ways to use this repo:
 
-For example instead of a calculating the probability of dice rolling, let's build a simulator and see what happens:
-
-```python
-from random import choices
-
-# Traditional die: A cube
-n_sides = 6
-die = list(range(1, n_sides+1))
-
-# Roll a die
-choices(population=die)[0]
-
-# Roll 2 dice
-roll_2_dice = lambda: choices(population=die, k=2)
-roll_2_dice()
-```
+1. Launch Colab in your brower: [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/brianspiering/ComputationalStatistics/blob/master/1_welcome.ipynb)
+1. Launch Binder in your browser: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/brianspiering/ComputationalStatistics/master)
+1. Download and run locally
