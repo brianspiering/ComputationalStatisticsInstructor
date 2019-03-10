@@ -10,7 +10,5 @@ dependencies:
   - numpy
   - pandas
   - pip
-  - pymc3
   - rise
-  - scikit-learn
   - seaborn
